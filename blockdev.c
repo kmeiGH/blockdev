@@ -153,7 +153,7 @@ static int init_fn(void)
 
 r_blk_init:
     if (dev->gd) {
-        put_disk(dev->gd);
+        del_gendisk(dev->gd);
     }
     if (dev->queue) {
         blk_mq_free_tag_set(&dev->tag_set);
