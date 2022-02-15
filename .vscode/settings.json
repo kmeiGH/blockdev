@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "module.h": "c",
+        "kernel.h": "c",
+        "slab.h": "c",
+        "uaccess.h": "c",
+        "fs.h": "c",
+        "kdev_t.h": "c",
+        "stdio.h": "c",
+        "fcntl.h": "c",
+        "cdev.h": "c",
+        "types.h": "c",
+        "device.h": "c",
+        "init.h": "c",
+        "unistd.h": "c",
+        "int-ll64.h": "c",
+        "string.h": "c",
+        "genhd.h": "c",
+        "blkdev.h": "c",
+        "sched.h": "c"
+    }
+}
