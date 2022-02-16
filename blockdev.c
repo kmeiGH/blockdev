@@ -120,6 +120,7 @@ static int init_fn(void)
         return -EBUSY;
     }
 
+    dev = kmalloc(sizeof(struct my_block_dev), GFP_KERNEL);
     // add actual disk structure to kernel, the number is the qty of minors and not the minor number
     dev->gd = alloc_disk(1);        
     if (!dev->gd) {
@@ -179,6 +180,8 @@ static void cleanup_fn(void)
     kfree(dev->data);
     // unregister numbers
     unregister_blkdev(major_num, BLOCK_DEV_NAME);
+
+    kfree(dev);
     pr_info("Device driver - %s removed successfully\n", BLOCK_DEV_NAME);
 };
 
